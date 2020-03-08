@@ -1,20 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="cloud">
+    <Dragon msg="Cloud Dragon Page"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Dragon from '@/components/Dragon.vue'
 import axios from "axios";
 import jsonp from "jsonp";
 
 export default {
-  name: 'Home',
+  name: 'Cloud',
   components: {
-    HelloWorld
+    Dragon
   },
   data(){
     return {
