@@ -7,10 +7,15 @@ import App from './App.vue'
 // 不加 ./ 会认为env是插件，import自己的文件，需要指定路径
 // import env from './env'
 
+const mock = true;
+if(mock) {
+  require('./mock/api');
+}
+
 // https://www.npmjs.com/package/axios   Interceptors
 // 根据前端的跨域方式做调整 /a/b : /api/a/b => /a/b
 // 暂定为接口代理的方式
-// axios.defaults.baseURL = '/api';
+axios.defaults.baseURL = '/api';
 axios.defaults.timeout = 8000;
 // 根据环境变量获取不同的请求地址
 // axios.defaults.baseURL = env.baseURL
