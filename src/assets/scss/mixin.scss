@@ -1,0 +1,14 @@
+// flex布局复用
+@mixin flex($hov:space-between, $col:center) {
+    display: flex;
+    justify-content: $hov;  // 元素在水平方向如何安放，默认水平居中
+    align-items: $col;      // 元素在垂直方向如何安放，默认垂直居中
+}
+// 背景图片样式复用
+@mixin bgImg($w:0,$h:0,$img:'',$size:contain) {
+    display: inline-block;
+    width: $w;
+    height: $h;
+    background: url($img) no-repeat center;
+    background-size: contain; // 让把背景图充满元素
+}
